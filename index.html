@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="./style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>Cheatsheet</title>
+  </head>
+  <body>
+    <h1>HTML/CSS-Befehlsübersicht</h1>
+<!--    <aside>
+      <nav>
+        <a href="#Verlinkungen">Verlinkungen</a>
+        <a href="#HTML-Tabellen">HTML-Tabellen</a>
+        <a href="#Tabellen-Design">Tabellen-Design</a>
+      </nav>
+    </aside>-->
+<aside>
+      <nav>
+        <a href="processes.html" >Vorgehensweisen</a><br>
+      </nav>
+</aside>
+    <article>
+      <table>
+        <thead>
+          <tr>
+            <th id="Verlinkungen" colspan="2">Verlinkungen</th>
+          </tr>
+          <tr>
+            <th>Eingabe</th>
+            <th>Ausgabe</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&lt;link href="./style.css" type="text/css" rel="stylesheet"&gt;</td>
+            <td>Stylesheet</td>
+          </tr>
+          <tr>
+            <td>&lt;link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet"&gt;</td>
+            <td>Schrift in HTML</td>
+          </tr>
+          <tr>
+            <td>@font-face {
+              font-family: 'Glegoo';
+              src: url('../fonts/Glegoo-Regular.ttf') format('truetype');
+            }</td>
+            <td>Schrift in CSS</td>
+          </tr>
+          <tr>
+            <td>..</td>
+            <td>Einen Ordner aufwärts</td>
+          </tr>
+          <tr>
+            <td>&lt;video src="test-video.mp4" controls&gt;
+              Video not supported
+              &lt;/video&gt;</td>
+            <td>Video</td>
+          </tr>
+          <tr>
+            <td>&lt;img src="path/to/image" alt="text describing image" /&gt;
+            </td>
+            <td>Bild</td>
+          </tr>
+          <tr>
+            <td>&lt;a href="#Verlinkungen"/&gt;Verlinkungen&lt;/a/&gt;
+            </td>
+            <td>Intern</td>
+          </tr>
+          </tbody>
+        </table>
+    </article>
+
+    <article>
+      <table>
+        <thead>
+          <tr>
+            <th id="HTML-Tabellen" colspan="2">HTML-Tabellen</th>
+          </tr>
+          <tr>
+            <th>Eingabe</th>
+            <th>Ausgabe</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&lt;table&gt;</td>
+            <td>Tabelle</td>
+          </tr>
+          <tr>
+            <td>&lt;th&gt;</td>
+            <td>Tabellenkopf</td>
+          </tr>
+          <tr>
+            <td>&lt;tr&gt;</td>
+            <td>Zeile</td>
+          </tr>
+          <tr>
+            <td>&lt;td&gt;</td>
+            <td>Dateneintrag</td>
+          </tr>
+          <tr>
+            <td>&lt;colspan&gt;</td>
+            <td>Zeilenspannweite</td>
+          </tr>
+          <tr>
+            <td>&lt;tbody&gt;</td>
+            <td>Tabellenkörper</td>
+          </tr>
+          <tr>
+            <td>&lt;tfoot&gt;</td>
+            <td>Fußzeile</td>
+          </tr>
+          </tbody>
+        </table>
+    </article>
+
+    <article>
+      <table>
+        <thead>
+          <tr>
+            <th id="Tabellen-Design" colspan="2">Tabellen-Design</th>
+          </tr>
+          <tr>
+            <th>Eingabe</th>
+            <th>Ausgabe</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>  margin-left: auto;<br>
+              margin-right: auto;</td>
+            <td>Zentrierung der Tabelle</td>
+          </tr>
+          <tr>
+            <td>width: 50%;</td>
+            <td>Bildschirmanpassung</td>
+          </tr>
+          <tr>
+            <td>background-color: hsla(120, 50%, 70%, 0.5);</td>
+            <td>hsla-Hintergrundfarbe</td>
+          </tr>
+          <tr>
+            <td>border-radius: 0%;</td>
+            <td>Rundung der Form</td>
+          </tr>
+          </tbody>
+        </table>
+    </article>
+
+    <article>
+      <figcaption><b>Das Box-Modell</b></figcaption>
+      <img src="pictures/box_modell.PNG" alt="Box-Modell"/>
+        <table>
+          <thead>
+            <tr>
+              <th id="Box-Befehle" colspan="2">Box-Befehle</th>
+            </tr>
+            <tr>
+              <th>Eingabe</th>
+              <th>Ausgabe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{height: 50%;<br>
+                width: 240px;
+              }
+              </td>
+              <td>Höhe, Weite Content</td>
+            </tr>
+            <tr>
+              <td>{border: 3px solid coral;
+              }</td>
+              <td>Rahmen: Dicke (thin, medium, thick), Stil, Farbe, dazu: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style#values" target="_blank">Rahmenstile</a></a></td>
+            </tr>
+            <tr>
+              <td>{padding: 10px;}</td>
+              <td>Passepartout im Uhrzeigersinn</td>
+            </tr>
+            <tr>
+              <td>{margin: 30px 20px;}</td>
+              <td>Außenabstand, hier oben/unten und links/rechts - bei den Abständen zw. zwei Boxen verbleibt nur der größere Abstand ("collapsing margins")</td>
+            </tr>
+            <tr>
+              <td>{border-radius: 50%;}</td>
+              <td>Rundung der Form - width und height müssen für Kreis gleich sein</td>
+            </tr>
+            <tr>
+              <td>{min-height: 150px;<br>
+                max-height: 300px;}</td>
+              <td>Mindesthöhe/-breite zur Lesbarkeit</td>
+            </tr>
+            <tr>
+              <td>{overflow: scroll;}</td>
+              <td>Umgang mit Content außerhalb der Parentbox, mgl: hidden, scroll, visible</td>
+            </tr>
+            <tr>
+              <td>* {
+                margin: 0;
+                padding: 0;
+              }</td>
+              <td>Reset des Browserdefaults</td>
+            </tr>
+            <tr>
+              <td>{display: none; }</td>
+              <td>entfernt Element aus Anzeige</td>
+            </tr>
+            <tr>
+              <td>{visibility: hidden;}</td>
+              <td>blendet Inhalt des Elements aus</td>
+            </tr>
+            <tr>
+              <td>* {box-sizing: border-box;}<br>{box-sizing: content-box;}</td>
+              <td>Boxenart, Content ist default</td>
+            </tr>
+            </tbody>
+          </table>
+    </article>
+
+  </body>
+</html>

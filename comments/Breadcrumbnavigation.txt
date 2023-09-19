@@ -1,0 +1,110 @@
+
+
+html
+__________________________________________________________
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+
+<ul class="breadcrumb">
+  <li>
+    <a href="shopping">Shopping</a>
+  </li>
+  <li>
+    <a href="fashion">Fashion</a>
+  </li>
+  <li>
+    <a href="#shoes">Shoes</a>           --> Verlinkung zu ID
+  </li>
+  <li>
+    <a href="flats.html">Flats</a>      --> Verlinkung zu html-file
+  </li>
+  <li>
+    <a href="#">Brown</a>    --> Verlinkung zu TOP
+  </li>
+</ul>
+</html>
+__________________________________________________________
+
+css
+__________________________________________________________
+.breadcrumb > li {
+display: inline;
+}
+
+.breadcrumb li+li::before {
+	padding: 10px;
+  content: ">";
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  padding: 5px;
+  background-color: hsla(210,50%,50%,0.9);
+  border: 1px solid hsla(210,30%,50%,0.9);
+  border-radius: 10px;
+  color: hsla(210,50%,100%,1);
+}
+
+.breadcrumb a:hover {
+  background-color: hsla(210,50%,0%,0.9);
+  border: 1px solid hsla(210,30%,0%,0.9);
+  color: red;
+}
+__________________________________________________________
+
+css Version 2
+__________________________________________________________
+.breadcrumb {
+  text-align: left;
+}
+
+.breadcrumb a {
+  float: left;
+  color: #fff;
+  background: darkcyan;
+  text-decoration: none;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 15px;
+  padding: 0 5px;
+}
+.breadcrumb .attribute a {
+  background-color: inherit;
+}
+.breadcrumb .location a::before,
+.breadcrumb .location a::after {
+  content: "";
+  position: absolute;
+  border-color: darkcyan;
+  border-style: solid;
+  border-width: 15px 5px;
+}
+
+.breadcrumb .location a::after {
+  left: 100%;
+  border-color: transparent;
+  border-left-color: darkcyan;
+}
+.breadcrumb .location a::before {
+  left: -10px;
+  border-left-color: transparent;
+}
+
+.attribute a{
+  color: gray;
+}
+
+.breadcrumb .location a:hover {
+  background-color: blue;
+}
+.breadcrumb .location a:hover::before {
+  border-color: blue;
+  border-left-color: transparent;
+}
+.breadcrumb .location a:hover::after {
+  border-left-color: blue;
+}
+__________________________________________________________
